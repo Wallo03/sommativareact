@@ -1,4 +1,146 @@
-.App {
+body {
+  margin: 0;
+  min-height: 100vh;
+  
+  grid-auto-flow: column;
+  place-content: center;
+  background: #425a52;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: teal;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.Div {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10vh;
+  align-items: center;
+}
+
+.img {
+  width:720px;
+  height:720px;
+  border-radius: 50%
+
+}
+
+.Card01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 30%;
+  background: #659384;
+  place-content: center;
+  position: relative;
+  left: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  flex-direction: column;
+  color: #e8e8e8;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+
+.Card01 .heading {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+
+.Card01 .btn {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg,#254823 0%, #234f1d 100% );
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Card01::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #000000 0%, #000000 100% );
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.Card01:hover::before {
+  height: 100%;
+}
+
+.Card01:hover {
+  box-shadow: none;
+}
+
+.btn:hover {
+  color: #265d2c;
+  background: #10440f;
+}
+
+.Card01 .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.Card01 .btn:active {
+  box-shadow: none;
+}
+
+
+
+
+.Footer {
+  color: white;
+  background-color: teal;
+}
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +177,5 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
+
